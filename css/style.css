@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+/**{
+    border: 2px dotted red;
+}*/
+
+html{
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/*NAVBAR*/
+nav ul li{
+    list-style: none;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul{
+    margin-top: 120px;
+    margin-right: 25px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:#000000;
+    font-size:30px;
+    margin: 15px;
+}
+
+nav ul li a:hover{
+    color: rgb(189, 76, 2);
+}
+
+
+/*LOGO*/
+.logo{
+    width: 70px;
+    height: 70px;
+}
+
+.logo-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6%;
+    max-width: 100%;
+
+}
+
+.logo-text h2, p{
+    text-align: center;
+}
+
+
+
+/*MAIN TAGS*/
+
+.header{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+}
+
+.body{
+    background-image: url(/07_web-personal/assets/thailand.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*HAMBURGUESA*/
+#menu {
+    display: none;
+    background-color: white;
+    height: 100%;
+    z-index: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+#menu-toggle:checked + #burger + #menu {
+    display: block;
+}
+
+/*Hiding checkbox*/
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    display: none;
+}
+
+#hamburguesa-png{
+    width: 50px;
+    height: 50px;
+}
+
+#burger{
+    position: absolute;
+    z-index: 1;
+
+}
+
+/*BUTTON*/
+.button a{
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Cinzel', serif;
+}
+
+.button{
+    height: 46px;
+    width: 154px;
+    border: none;
+    background-color: white;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.button-bottom{
+    margin: 350px 50px 50px 50px;
+}
+
+.button a:hover{
+    color: rgb(189, 76, 2);
+}
+
+
+@media only screen and (min-width:768px){
+    #hamburguesa-png{
+        display: none;
+    }
+    #menu{
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        height: auto;
+    }
+    #menu-toggle:checked + #burger + #menu{
+        display: inline-block;
+        flex-direction: row;
+    }
+    nav ul{
+        display: flex;
+    }
+
+    .logo-text{
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+    }
+
+    .logo-text p{
+        display: none;
+    }
+
+    .logo-text img{
+        padding-left: 10px;
+    }
+
+    .logo{
+        padding-right: 10px;
+    }
+
+    .button-bottom {
+        margin: 445px 50px 50px 50px;
+    }
+
+    .main-sobremi{
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin: 15px;
+    }
+    
+}
+
+/*CONTACTO*/
+
+#contact h1{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 4px;
+}
+
+#contact label{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#contact form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#contact main{
+    display: flex;
+    justify-content: center;
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+}
+
+form *{
+    padding: 12px;
+    align-items: center;
+}
+
+input[type="submit"]{
+    background-color: black;
+    color: white;
+    margin-top: 25px;
+    font-family: georgia;
+    width: 50%;
+    align-self: center;
+    border: none;
+}
+
+#main-contact{
+    margin:30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#emoji{
+    font-size: 30px;
+    margin-bottom: -13px;
+    margin-top: -20px;
+}
+
+.header-contacto{
+    margin: 15px;
+    margin-top: 23px;
+}
+
+
+
+/*SOBRE MI*/
+.main-sobremi{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.main-sobremi img{
+    width: 100%;
+    height: auto;
+}
+
+.main-sobremi a{
+    color: rgb(189, 76, 2);
+}
+
+.header-sobremi{
+    margin-left: 8px;
+    margin-top: 13px;
+}
+
