@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 /**{
     border: 2px dotted red;
 }*/
 
 html{
-    
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'EB Garamond', serif;
 }
 
+footer{
+    text-align: center;
+}
 
 /*NAVBAR*/
 nav ul li{
@@ -136,7 +138,7 @@ nav ul li a:hover{
 }
 
 
-@media only screen and (min-width:768px){
+@media only screen and (min-width:780px){
     #hamburguesa-png{
         display: none;
     }
@@ -176,23 +178,37 @@ nav ul li a:hover{
         margin: 445px 50px 50px 50px;
     }
 
-    .main-sobremi{
-        flex-direction: row;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        margin: 15px;
+    #contact form{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
     }
     
+    .main-sobremi{
+        display: flex;
+        flex-direction: row;   
+     }
+
+     .proyecto-style{
+        max-width: 375px;
+    }
+
+    
+}
+
+@media only screen and (min-width:1024px){
+    .main-sobremi section{
+        max-width: 63%;
+    }
 }
 
 /*CONTACTO*/
 
-#contact h1{
+.header-contacto h1{
     text-align: center;
-    font-size: 35px;
-    margin-top: 4px;
+    margin-top: 0;
+    font-size: 60px;
+    
 }
 
 #contact label{
@@ -243,16 +259,16 @@ input[type="submit"]{
 }
 
 .header-contacto{
-    margin: 15px;
-    margin-top: 23px;
+    margin-left: 8px;
+    margin-top: 13px;
 }
 
 
 
 /*SOBRE MI*/
 .main-sobremi{
-    flex-direction: column;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -260,8 +276,9 @@ input[type="submit"]{
 }
 
 .main-sobremi img{
-    width: 100%;
+    width: 85%;
     height: auto;
+    max-width: 361px;
 }
 
 .main-sobremi a{
@@ -273,3 +290,137 @@ input[type="submit"]{
     margin-top: 13px;
 }
 
+.header-sobremi h1{
+    text-align: center;
+    margin-top: 0;
+    font-size: 60px;
+}
+
+.main-sobremi h2{
+    text-align: left;
+    font-size: 30px;
+}
+
+.main-sobremi h5{
+    color: #202025;
+    text-align: left;
+    font-size: 20px;
+}
+
+.main-sobremi p{
+    color:rgb(39, 39, 39);
+    text-align: left;
+}
+
+.main-sobremi section{
+    box-sizing: border-box;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    width: 100%;
+    line-height: 30px;
+}
+
+
+/*PROYECTOS*/
+/*header*/
+.header-proyectos{
+    margin-left: 8px;
+    margin-top: 13px;
+}
+
+.header-proyectos h1{
+    text-align: center;
+    margin-top: 0;
+    font-size: 60px;
+}
+/*main*/
+.main-proyectos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.proyecto-style{
+    width: 350px;
+    padding: 15px;
+}
+
+.proyecto-style h4{
+    font-size: 20px;
+    text-align: center;
+}
+
+.main-proyectos #foto-elefante, #foto-iran, #foto-torres{
+    width: 100%;
+    height: auto;
+}
+
+
+/*PROYECTO ELEFANTE ASIÁTICO*/
+.body-proyecto-elefante{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+#texto-elefante{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 25px;
+}
+
+.main-proyecto-elefante h1{
+    text-align: center;
+}
+
+.main-proyecto-elefante p{
+    width: auto;
+}
+
+/*galeria de fotos*/
+.gallery img{
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery{
+    margin: 0 0.65rem;
+}
+
+.gallery-item{
+    height: auto;
+    margin: 0.5rem;
+}
+
+.gallery-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 640px) {
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 300px);
+        grid-auto-flow: row dense;
+    }
+
+    .gallery-item{
+        margin: 0.7rem;
+    }
+
+    .gallery-item:first-child{
+        grid-row: span 1;
+    }
+
+    .gallery-item:nth-child(2){
+        grid-column: 2/3;
+        grid-row: span 2;
+    }
+
+    .gallery-item:nth-child(6),
+    .gallery-item:nth-child(8){
+        grid-row: span 2;
+    }
+}
